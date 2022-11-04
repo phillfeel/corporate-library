@@ -1,0 +1,49 @@
+.booksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bookCard {
+  width: 200px;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.bookImage {
+  width: 150px;
+}
+
+.searchBar {
+  padding-top: 10px;
+}
+
+.selector {
+  width: 95px;
+  color: rgba(0, 0, 0, 0.775);
+  border-radius: 2px 0 0 2px;
+  height: 24.8px;
+  box-sizing: border-box;
+  border-color: black;
+  border-right: 0;
+  padding-left: 8px;
+}
+
+.selector:focus-visible {
+  outline: 0px;
+}
+
+.search {
+  width: 200px;
+  padding-left: 10px;
+  height: 25px;
+  box-sizing: border-box;
+  border-radius: 0 2px 2px 0;
+  border-width: thin;
+  border-color: black;
+}
+
+.search:focus-visible {
+  outline: 0px;
+}

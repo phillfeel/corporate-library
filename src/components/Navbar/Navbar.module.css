@@ -1,0 +1,41 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: burlywood;
+  margin-bottom: 40px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 810px) {
+  .navbar {
+    justify-content: center;
+  }
+  .navigation {
+    display: none;
+    flex-direction: row;
+  }
+}
+
+.menuItem {
+  margin-right: 30px;
+}
+
+.menuItem:last-child {
+  margin-right: 0;
+}
+
+.menuText {
+  text-decoration: none;
+  font-size: 1.17em;
+  color: black;
+}

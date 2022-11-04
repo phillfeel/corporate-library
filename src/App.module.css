@@ -1,0 +1,17 @@
+.mainContainer {
+  min-width: 576px;
+}
+
+.body {
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media screen and (max-width: 605px) {
+  .body {
+    max-width: 540px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
