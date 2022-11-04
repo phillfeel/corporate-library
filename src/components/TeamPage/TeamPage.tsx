@@ -1,6 +1,4 @@
-import React from "react";
-
-const TeamPage = () => {
+const TeamPage: React.FC = () => {
   return (
     <>
       <h2>Сотрудники библиотеки</h2>

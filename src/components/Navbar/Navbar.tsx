@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 import styles from "./Navbar.module.css";
@@ -10,22 +9,22 @@ const Navbar: React.FC = () => {
       <nav>
         <ul className={styles.navigation}>
           <li className={styles.menuItem}>
-            <Link className={styles.menuText} to="/">
+            <Link className={styles.menuText} to="/corporate-library">
               Главная
             </Link>
           </li>
           <li className={styles.menuItem}>
-            <Link className={styles.menuText} to="/news">
+            <Link className={styles.menuText} to="/corporate-library/news">
               Новости библиотеки
             </Link>
           </li>
           <li className={styles.menuItem}>
-            <Link className={styles.menuText} to="/team">
+            <Link className={styles.menuText} to="/corporate-library/team">
               Сотрудники библиотеки
             </Link>
           </li>
           <li className={styles.menuItem}>
-            <Link className={styles.menuText} to="/events">
+            <Link className={styles.menuText} to="/corporate-library/events">
               Мероприятия библиотеки
             </Link>
           </li>

@@ -1,6 +1,4 @@
-import React from "react";
-
-const NewsPage = () => {
+const NewsPage: React.FC = () => {
   return (
     <>
       <h2>Новости библиотеки</h2>

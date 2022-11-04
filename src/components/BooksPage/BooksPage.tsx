@@ -10,7 +10,7 @@ enum SearchCategoryEnum {
   author = "AUTHOR",
 }
 
-const BooksPage = () => {
+const BooksPage: React.FC = () => {
   const [books, setBooks] = useState<BookInterface[]>([]);
   const [searchCategory, setSearchCategory] = useState<SearchCategoryEnum>(
     SearchCategoryEnum.title
@@ -29,7 +29,7 @@ const BooksPage = () => {
 
   const searchHandleChange = (e: React.SyntheticEvent<EventTarget>) => {
     const target = e.target as HTMLInputElement;
-    setSearchText(target.value as SearchCategoryEnum);
+    setSearchText(target.value);
   };
 
   const filterBySearch = (entities: BookInterface[], search: string) =>
