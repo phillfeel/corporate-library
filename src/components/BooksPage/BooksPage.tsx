@@ -17,6 +17,11 @@ const BooksPage: React.FC = () => {
   );
   const [searchText, setSearchText] = useState<string>("");
 
+  const PLACEHOLDER_TEXT =
+    searchCategory === SearchCategoryEnum.author
+      ? "Введите автора..."
+      : "Введите название...";
+
   useEffect(() => {
     const libraryBooks: BookInterface[] = data;
     setBooks(libraryBooks);
@@ -57,7 +62,7 @@ const BooksPage: React.FC = () => {
           className={styles.search}
           value={searchText}
           onChange={searchHandleChange}
-          placeholder="Введите текст..."
+          placeholder={PLACEHOLDER_TEXT}
         />
       </div>
       <Books items={filterBySearch(books, searchText)} />
