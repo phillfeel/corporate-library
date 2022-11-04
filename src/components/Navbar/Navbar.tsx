@@ -5,7 +5,9 @@ import styles from "./Navbar.module.css";
 const Navbar: React.FC = () => {
   return (
     <div className={styles.navbar}>
-      <h1>Корпоративная библиотека</h1>
+      <Link to="/corporate-library">
+        <h1>Корпоративная библиотека</h1>
+      </Link>
       <nav>
         <ul className={styles.navigation}>
           <li className={styles.menuItem}>
