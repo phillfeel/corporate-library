@@ -1,6 +1,5 @@
 .booksContainer {
   max-width: 1410px;
-  min-width: 564px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

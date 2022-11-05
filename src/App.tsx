@@ -12,32 +12,24 @@ import styles from "./App.module.css";
 
 function App() {
   return (
-    <div className="App">
-      <div className={styles.mainContainer}>
-        <BrowserRouter>
-          <Navbar />
-          <Profile />
-          <div className={styles.body}>
-            <Routes>
-              <Route path="/corporate-library" element={<BooksPage />} />
-              <Route path="/corporate-library/news" element={<NewsPage />} />
-              <Route path="/corporate-library/team" element={<TeamPage />} />
-              <Route
-                path="/corporate-library/events"
-                element={<EventsPage />}
-              />
-              <Route
-                path="/corporate-library/book/:id"
-                element={<BookPage />}
-              />
-              <Route
-                path="/corporate-library/profile"
-                element={<ProfilePage />}
-              />
-            </Routes>
-          </div>
-        </BrowserRouter>
-      </div>
+    <div className={styles.app}>
+      <BrowserRouter>
+        <Navbar />
+        <Profile />
+        <div className={styles.body}>
+          <Routes>
+            <Route path="/corporate-library" element={<BooksPage />} />
+            <Route path="/corporate-library/news" element={<NewsPage />} />
+            <Route path="/corporate-library/team" element={<TeamPage />} />
+            <Route path="/corporate-library/events" element={<EventsPage />} />
+            <Route path="/corporate-library/book/:id" element={<BookPage />} />
+            <Route
+              path="/corporate-library/profile"
+              element={<ProfilePage />}
+            />
+          </Routes>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }

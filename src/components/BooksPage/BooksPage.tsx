@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import data from "../../fixtures/books.json";
-import { BookInterface } from "../../interfaces/book.interface";
-import Books from "../Books/Books";
+import { IBook } from "../../interfaces/book.interface";
+import BooksList from "../BooksList/BooksList";
 
 import styles from "./BooksPage.module.css";
 
@@ -11,7 +11,7 @@ enum SearchCategoryEnum {
 }
 
 const BooksPage: React.FC = () => {
-  const [books, setBooks] = useState<BookInterface[]>([]);
+  const [books, setBooks] = useState<IBook[]>([]);
   const [searchCategory, setSearchCategory] = useState<SearchCategoryEnum>(
     SearchCategoryEnum.title
   );
@@ -23,7 +23,7 @@ const BooksPage: React.FC = () => {
       : "Введите название...";
 
   useEffect(() => {
-    const libraryBooks: BookInterface[] = data;
+    const libraryBooks: IBook[] = data;
     setBooks(libraryBooks);
   }, []);
 
@@ -37,7 +37,7 @@ const BooksPage: React.FC = () => {
     setSearchText(target.value);
   };
 
-  const filterBySearch = (entities: BookInterface[], search: string) =>
+  const filterBySearch = (entities: IBook[], search: string) =>
     entities.filter((item) => {
       if (searchCategory === SearchCategoryEnum.title) {
         return item.title.toLowerCase().includes(search.toLocaleLowerCase());
@@ -65,7 +65,7 @@ const BooksPage: React.FC = () => {
           placeholder={PLACEHOLDER_TEXT}
         />
       </div>
-      <Books items={filterBySearch(books, searchText)} />
+      <BooksList items={filterBySearch(books, searchText)} />
     </>
   );
 };
