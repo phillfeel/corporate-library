@@ -9,6 +9,7 @@
 }
 
 .bookCard {
+  display: block;
   width: 200px;
   text-align: center;
   margin-top: 30px;
@@ -19,8 +20,16 @@
   cursor: pointer;
 }
 
-.bookCard:hover {
-  box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+@media (hover: hover) {
+  .bookCard:hover {
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+  }
+}
+
+@media (hover: none) {
+  .bookCard:active {
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+  }
 }
 
 .bookImage {

@@ -12,13 +12,16 @@ const BooksList: React.FC<BookProps> = ({ items }) => {
   return (
     <div className={styles.booksContainer}>
       {items.map((item: IBook, index: number) => (
-        <div className={styles.bookCard} key={index + item.title}>
-          <Link to={`/corporate-library/book/${index}`} state={item}>
-            <h4 className={styles.bookText}>{item.author}</h4>
-            <img className={styles.bookImage} src={BookImage} alt="book" />
-            <h4 className={styles.bookText}>{item.title}</h4>
-          </Link>
-        </div>
+        <Link
+          className={styles.bookCard}
+          to={`/corporate-library/book/${index}`}
+          state={item}
+          key={index + item.title}
+        >
+          <h4 className={styles.bookText}>{item.author}</h4>
+          <img className={styles.bookImage} src={BookImage} alt="book" />
+          <h4 className={styles.bookText}>{item.title}</h4>
+        </Link>
       ))}
     </div>
   );
