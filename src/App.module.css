@@ -8,6 +8,8 @@
   text-align: center;
   padding-left: 40px;
   padding-right: 40px;
+  /* trick for correct show empty page on mobile version */
+  min-height: 108vh;
 }
 
 @media screen and (max-width: 605px) {
