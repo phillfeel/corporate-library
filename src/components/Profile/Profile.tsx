@@ -5,8 +5,8 @@ import styles from "./Profile.module.css";
 
 const Profile: React.FC = () => {
   return (
-    <Link to="/corporate-library/profile">
-      <img className={styles.userIcon} width={50} src={UserIcon} alt="user" />
+    <Link className={styles.userIcon} to="/corporate-library/profile">
+      <img width={50} src={UserIcon} alt="user" />
     </Link>
   );
 };

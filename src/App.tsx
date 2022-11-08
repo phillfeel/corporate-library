@@ -15,8 +15,8 @@ function App() {
     <div className={styles.app}>
       <BrowserRouter>
         <Navbar />
-        <Profile />
         <div className={styles.body}>
+          <Profile />
           <Routes>
             <Route path="/corporate-library" element={<BooksPage />} />
             <Route path="/corporate-library/news" element={<NewsPage />} />
